@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>کارگاه پژوهش جاغوری</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <header class="top"><div><b>کارگاه پژوهش جاغوری</b><small>ابزار متن‌باز برای تدوین و راستی‌آزمایی تاریخ محلی</small></div>
+    <div class="actions"><button id="export">ذخیرهٔ پشتیبان</button><button id="copy-backup">نمایش متن پشتیبان</button><button id="import">بازیابی</button><input id="file" type="file" accept=".json,application/json" hidden></div>
+  </header>
+  <div class="layout">
+    <aside><h2>فصل‌ها</h2><nav id="chapters" aria-label="فصل‌ها"></nav><button id="add-chapter">+ افزودن فصل</button>
+      <p class="hint">اطلاعات فقط در همین مرورگر می‌ماند. از داده‌ها پشتیبان بگیرید.</p></aside>
+    <main id="main" aria-live="polite"></main>
+  </div>
+  <dialog id="backup-dialog"><h2>متن پشتیبان</h2><p>همهٔ متن را انتخاب و در جای خصوصی نگه دارید. این متن را در GitHub منتشر نکنید.</p><textarea id="backup-text" readonly></textarea><button id="close-backup">بستن</button></dialog>
+</body>
+</html>
